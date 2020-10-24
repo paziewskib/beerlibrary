@@ -1,0 +1,26 @@
+{% extends 'beerlist/base.html' %}
+<title>{% block title %}Brewery Details{% endblock %}</title>
+
+{% block body %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <img src="{{ brewery.brewery_logo.url }}" class="img-responsive">
+
+            <h1>{{ brewery.brewery_name }}</h1>
+
+            <ul>
+                {% for beer in brewery.beer_set.all %}
+
+                     <a href="{% url 'beer:detail' brewery.id %}">
+                        <li>{{ beer.beer_name}} - {{ beer.style}}</li>
+                    </a>
+
+                {% endfor %}
+            </ul>
+
+            {% if error_message %}
+                <p><strong>{{ error_message }}</strong></p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

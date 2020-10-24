@@ -1,0 +1,27 @@
+{% extends 'beerlist/base.html' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+    <ul>
+        {% for brewery in breweries_list %}
+
+            <a href="{% url 'beerlist:detail' brewery.id %}">
+                <img src="{{ brewery.brewery_logo.url }}" class="img-responsive">
+            </a>
+
+            <li><a href="{% url 'beerlist:detail' brewery.id %}"> {{ brewery.brewery_name}} </a></li>
+
+            <form action="{% url 'beerlist:brewery-delete' brewery.id %}" method="post" style="display: inline">
+                {% csrf_token %}
+                <input type="hidden" name="brewery_id" value="{{ brewery.id }}"/>
+                <button type="submit" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </form>
+        {% endfor %}
+    </ul>
+            </div></div></div></div>
+{% endblock %}
