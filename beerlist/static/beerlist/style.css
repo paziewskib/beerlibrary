@@ -7,14 +7,4 @@ body{
     font-family: 'Teko';
 }
 
-table.table-bordered{
-    width: 50%;
-    style="width: 50%";
-    font-family: 'Teko';
-}
-
-table{
-    width: 50%;
-    style="width: 50%";
-    font-family: 'Teko';
-}
+#fix css - probably cant upload setting to base.html
