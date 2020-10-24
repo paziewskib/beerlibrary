@@ -11,7 +11,7 @@
             <ul>
                 {% for beer in brewery.beer_set.all %}
 
-                     <a href="{% url 'beer:detail' brewery.id %}">
+                     <a href="{% url 'beerlist:beer-detail' beer.id %}">
                         <li>{{ beer.beer_name}} - {{ beer.style}}</li>
                     </a>
 

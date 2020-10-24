@@ -1,0 +1,23 @@
+{% extends 'beerlist/base.html' %}
+<title>{% block title %}Beer Details{% endblock %}</title>
+
+{% block body %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <img src="{{ brewery.brewery_logo.url }}" class="img-responsive">
+
+            <h2>{{ beer.beer_name}} - {{ beer.style}}</h2>
+            <br><br>
+            <table class="table table-bordered">
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                </tr>
+            </table>
+
+            {% if error_message %}
+                <p><strong>{{ error_message }}</strong></p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

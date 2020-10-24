@@ -6,3 +6,15 @@ body{
     border-radius: 0;
     font-family: 'Teko';
 }
+
+table.table-bordered{
+    width: 50%;
+    style="width: 50%";
+    font-family: 'Teko';
+}
+
+table{
+    width: 50%;
+    style="width: 50%";
+    font-family: 'Teko';
+}

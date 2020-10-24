@@ -30,3 +30,8 @@ class BreweryUpdate(UpdateView):
 class BreweryDelete(DeleteView):
     model = Brewery
     success_url = reverse_lazy('beerlist:index')
+
+
+class BeerDetailView(generic.DetailView):
+    model = Beer
+    template_name = 'beerlist/beer_detail.html'

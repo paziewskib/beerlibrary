@@ -17,5 +17,8 @@ urlpatterns = [
     url(r'brewery/(?P<pk>[0-9]+)/$', views.BreweryUpdate.as_view(), name='brewery-update'),
 
     # /beerlist/brewery/2/delete/
-    url(r'brewery/(?P<pk>[0-9]+)/delete/$', views.BreweryDelete.as_view(), name='brewery-delete')
+    url(r'brewery/(?P<pk>[0-9]+)/delete/$', views.BreweryDelete.as_view(), name='brewery-delete'),
+
+    # /beerlist/beer/
+    url(r'beer/(?P<pk>[0-9]+)/details$', views.BeerDetailView.as_view(), name='beer-detail'),
 ]
