@@ -1,5 +1,5 @@
-<h1><b>
+<h1><i><b>
 BeerLibrary
-</b></h1>
+</b></i></h1>
 
 Beer info storage application
