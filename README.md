@@ -2,4 +2,4 @@
 BeerLibrary
 </b></h1>
 
-Beer info storage application.
+<i>Beer info storage application</i>
